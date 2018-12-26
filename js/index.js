@@ -10,22 +10,7 @@ var _createClass = function () {function defineProperties(target, props) {for (v
 { id: 'Heater 3', padLetter: 'C', keyCode: 67, src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3', type: 'audio/mp3' }];var
 
 
-DrumPad = function (_React$Component) {_inherits(DrumPad, _React$Component);function DrumPad() {var _ref;var _temp, _this, _ret;_classCallCheck(this, DrumPad);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DrumPad.__proto__ || Object.getPrototypeOf(DrumPad)).call.apply(_ref, [this].concat(args))), _this), _this.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    handleKeyDown = function (event) {
+DrumPad = function (_React$Component) {_inherits(DrumPad, _React$Component);function DrumPad() {var _ref;var _temp, _this, _ret;_classCallCheck(this, DrumPad);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DrumPad.__proto__ || Object.getPrototypeOf(DrumPad)).call.apply(_ref, [this].concat(args))), _this), _this.    handleKeyDown = function (event) {
       if (event.keyCode === _this.props.padLetter.charCodeAt()) {
         _this.audio.play();
         _this.audio.currentTime = 0; //set time audio should play at (0 seconds)
