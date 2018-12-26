@@ -1,0 +1,44 @@
+#drum-machine {//outer container
+  background-color: pink;
+  justify-content: center;
+  align-items: center;
+}
+#display {//for 9 drum elements
+  height: 15vh;
+  display: flex;
+  color: blue;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+#drum-pads {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  color: blue;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  padding: 20px;
+  font-size: 50px;
+  color: blue;
+  font-weight: bold;
+  textAlign: 'center';
+}
+.drum-pad {
+  border: 5px solid grey;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1vw;
+  background-color: white;
+  cursor: pointer;
+}
+.drum-pad:hover{
+  background-color: grey;
+  transition: 1s ease;
+}
