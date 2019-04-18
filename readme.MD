@@ -39,7 +39,7 @@ App to create a simple drum machine using React. This was an objective for FreeC
 
 ## Screenshots
 
-![Example screenshot](./img/drum-machine.png).
+![Example screenshot](./drum-machine.png).
 
 ## Technologies
 
