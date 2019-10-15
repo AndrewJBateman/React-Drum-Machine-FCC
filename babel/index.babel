@@ -1,45 +1,47 @@
-const drumAudio = [ //9 drum elements with src attribute for audio element
-  { id: 'kit & hat', padLetter: 'Q', keyCode: 81, src: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3', type: 'audio/mp3' },
-  { id: 'Bld H1', padLetter: 'W', keyCode: 87, src: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3', type: 'audio/mp3' },
-  { id: 'Dry Ohh', padLetter: 'E', keyCode: 69, src: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3', type: 'audio/mp3' },
-  { id: 'Punchy Kick', padLetter: 'A', keyCode: 65, src: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3', type: 'audio/mp3' },
-  { id: 'Side Stick', padLetter: 'S', keyCode: 83, src: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3', type: 'audio/mp3' },
-  { id: 'Heater 1', padLetter: 'D', keyCode: 68, src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3', type: 'audio/mp3' },
-  { id: 'Brk Snr', padLetter: 'Z', keyCode: 90, src: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3', type: 'audio/mp3' },
-  { id: 'Heater 2', padLetter: 'X', keyCode: 88, src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3', type: 'audio/mp3' },
-  { id: 'Heater 3', padLetter: 'C', keyCode: 67, src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3', type: 'audio/mp3' },
-]
+// tslint:disable-next-line: typedef
+const drumAudio = [ // 9 drum elements with src attribute for audio element
+  { id: "kit & hat", padLetter: "Q", keyCode: 81, src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3", type: "audio/mp3" },
+  { id: "Bld H1", padLetter: "W", keyCode: 87, src: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3", type: "audio/mp3" },
+  { id: "Dry Ohh", padLetter: "E", keyCode: 69, src: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3", type: "audio/mp3" },
+  // tslint:disable-next-line: max-line-length
+  { id: "Punchy Kick", padLetter: "A", keyCode: 65, src: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3", type: "audio/mp3" },
+  { id: "Side Stick", padLetter: "S", keyCode: 83, src: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3", type: "audio/mp3" },
+  { id: "Heater 1", padLetter: "D", keyCode: 68, src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3", type: "audio/mp3" },
+  { id: "Brk Snr", padLetter: "Z", keyCode: 90, src: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3", type: "audio/mp3" },
+  { id: "Heater 2", padLetter: "X", keyCode: 88, src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3", type: "audio/mp3" },
+  { id: "Heater 3", padLetter: "C", keyCode: 67, src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3", type: "audio/mp3" },
+];
 
 class DrumPad extends React.Component {
-  
-  //method invoked immediately after component mounted using event listener
+
+  // method invoked immediately after component mounted using event listener
   componentDidMount() {
-   document.addEventListener('keydown', this.handleKeyDown)
-   //window.focus()//set focus to the current window
+   document.addEventListener("keydown", this.handleKeyDown);
+   // window.focus()//set focus to the current window
   }
-  
-  //method for when component to be removed from DOM
+
+  // method for when component to be removed from DOM
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown)
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
-  
-  //method to handle a key down event from keyboard - play HTML audio and change display
-  //no need to state actual keyCode
+
+  // method to handle a key down event from keyboard - play HTML audio and change display
+  // no need to state actual keyCode
   handleKeyDown = event => {
     if(event.keyCode === this.props.padLetter.charCodeAt()) {
-      this.audio.play()
-      this.audio.currentTime = 0 //set time audio should play at (0 seconds)
-      this.props.handleDisplay(this.props.id)
+      this.audio.play();
+      this.audio.currentTime = 0; // set time audio should play at (0 seconds)
+      this.props.handleDisplay(this.props.id);
     }
   }
-  //method to handle a click event on any of the 8 drum pads
+  // method to handle a click event on any of the 8 drum pads
   handleClick = () => {
-    this.audio.play()
-    this.audio.currentTime = 0 //set time audio should play at (0 seconds)
-    this.props.handleDisplay(this.props.id)//changes value of parameter used in display function
+    this.audio.play();
+    this.audio.currentTime = 0; // set time audio should play at (0 seconds)
+    this.props.handleDisplay(this.props.id);// changes value of parameter used in display function
   }
-  
-  //render letters on pads
+
+  // render letters on pads
   render() {
     const {id, src, padLetter} = this.props;
     return(
@@ -47,24 +49,24 @@ class DrumPad extends React.Component {
         <h1>{padLetter}</h1>
         <audio ref={ref => this.audio = ref} className="clip" src={src} id={padLetter}></audio>
       </div>
-    )
+    );
   }
-}//end of class
+}// end of class
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      display: ''
-    }
+      display: ""
+    };
   }
 
-  //changes state of display according to value of this.props.id in handleClick method
-  handleDisplay = display => this.setState({ display })
+  // changes state of display according to value of this.props.id in handleClick method
+  handleDisplay = display => this.setState({ display });
 
-  //render all 9 drum pads with padLetters & show display state
-//map method used to invoke function for each drum pad
-  render(){
+  // render all 9 drum pads with padLetters & show display state
+// map method used to invoke function for each drum pad
+  render() {
     return(
       <div id="drum-machine">
         <div>
@@ -75,12 +77,12 @@ class App extends React.Component {
         </div>
         <div id="drum-pads">
           {drumAudio.map(d => (
-            <DrumPad id={d.id} padLetter={d.padLetter} src={d.src} handleDisplay = {this.handleDisplay}/>
+            <DrumPad id={d.id} key={d.keyCode} padLetter={d.padLetter} src={d.src} handleDisplay = {this.handleDisplay}/>
         ))}
         </div>
-      </div>//end of drum-machine div
-    )
-  }//end of render()
-}//end of class App
+      </div>// end of drum-machine div
+    );
+  }// end of render()
+}// end of class App
 
-ReactDOM.render(<App/>,document.getElementById("root"))
+ReactDOM.render(<App/>,document.getElementById("root"));
