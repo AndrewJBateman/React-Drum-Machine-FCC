@@ -1,10 +1,10 @@
-# React Drum Machine
+# :zap: React Drum Machine
 
-App to create a simple drum machine using React. This was an objective for FreeCodeCamp. Uses babel javascript transpiler.
+* App to create a simple drum machine using React. This was an objective for FreeCodeCamp. Uses babel javascript transpiler.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -15,7 +15,7 @@ App to create a simple drum machine using React. This was an objective for FreeC
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
+## :books: General info
 
 **FCC Objective:** Build a CodePen.io app using HTML, JavaScript, SCSS and React.
 
@@ -24,32 +24,26 @@ App to create a simple drum machine using React. This was an objective for FreeC
 **Requirements:**
 
 * _User Story #1:_ I should be able to see an outer container with a corresponding id="drum-machine" that contains all other elements.
-
 * _User Story #2:_ Within #drum-machine I can see an element with a corresponding id="display".
-
 * _User Story #3:_ Within #drum-machine I can see 9 clickable drum pad elements, each with a class name of drum-pad, a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. The drum pads MUST be in this order.
-
 * _User Story #4:_ Within each .drum-pad, there should be an HTML5 audio element which has a src attribute pointing to an audio clip, a class name of clip, and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
-
 * _User Story #5:_ When I click on a .drum-pad element, the audio clip contained in its child audio element should be triggered.
-
 * _User Story #6:_ When I press the trigger key associated with each .drum-pad, the audio clip contained in its child audio element should be triggered (e.g. pressing the Q key should trigger the drum pad which contains the string "Q", pressing the W key should trigger the drum pad which contains the string "W", etc.).
+ _User Story #7:_ When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
 
-* _User Story #7:_ When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
-
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/drum-machine.png).
 
-## Technologies
+## :signal_strength: Technologies
 
 * [React v16.4.0](https://reactjs.org/) Javascript library.
 
-## Setup
+## :floppy_disk: Setup
 
 Open html file in the browser and it will run. Open browser dev tools for more information.
 
-## Code Examples
+## :computer: Code Examples
 
 * extract of `class DrumPad`
 
@@ -66,7 +60,7 @@ Open html file in the browser and it will run. Open browser dev tools for more i
 
 ```
 
-## Features
+## :cool: Features
 
 * uses an array of drumAudio elements that are accessed later.
 
@@ -85,11 +79,11 @@ const drumAudio = [ //9 drum elements with src attribute for audio element
 
 ```
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
 * Status: Tested and 100% working.
 
-## Inspiration
+## :clap: Inspiration
 
 * [Front End Libraries Projects - Build a Drum Machine](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 * [Drum Machine React Tutorial - Part 1](https://www.youtube.com/watch?v=nBF6dFjb7p0)
@@ -97,6 +91,6 @@ const drumAudio = [ //9 drum elements with src attribute for audio element
 * [Drum Machine React Tutorial - Part 3](https://www.youtube.com/watch?v=Sqb5oMIa4yo)
 * [Drum Machine React Tutorial - Part 4](https://www.youtube.com/watch?v=ESSQykjKmuA&t=112s)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
