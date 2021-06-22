@@ -1,8 +1,12 @@
 # :zap: React Drum Machine
 
 * App to create a simple drum machine using React. This was an objective for FreeCodeCamp. Uses babel javascript transpiler.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/React-Drum-Machine-FCC?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/React-Drum-Machine-FCC?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/React-Drum-Machine-FCC?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/React-Drum-Machine-FCC?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -41,7 +45,7 @@
 
 ## :floppy_disk: Setup
 
-Open html file in the browser and it will run. Open browser dev tools for more information.
+* Open html file in the browser and it will run. Open browser dev tools for more information.
 
 ## :computer: Code Examples
 
@@ -91,6 +95,10 @@ const drumAudio = [ //9 drum elements with src attribute for audio element
 * [Drum Machine React Tutorial - Part 3](https://www.youtube.com/watch?v=Sqb5oMIa4yo)
 * [Drum Machine React Tutorial - Part 4](https://www.youtube.com/watch?v=ESSQykjKmuA&t=112s)
 
+## :file_folder: License
+
+* N/A
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
